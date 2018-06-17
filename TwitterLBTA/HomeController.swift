@@ -6,6 +6,20 @@
 //  Copyright © 2018 Carlo Gilmar. All rights reserved.
 //
 
+
+/*
+ - Controller and their cycle life
+ - Collection View object and function
+ - numberOfItemsInSection
+ - cellForItemAt
+ - dequeueReusableCell
+ - Register
+ - UI Collection View Controller Object
+ - UIKit library
+ - CGSize
+ - NSCoder
+ */
+
 import UIKit
 
 class WordCell: UICollectionViewCell {
@@ -13,7 +27,25 @@ class WordCell: UICollectionViewCell {
     //Creating a new class for show words
     override init(frame: CGRect) {
         super.init(frame: frame)
+        //backgroundColor = .yellow
+        setupViews()
+    }
+    
+    // Closure as attribute
+    let wordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Hello!!"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    func setupViews() {
         backgroundColor = .yellow
+        addSubview(wordLabel)
+        wordLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        wordLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        wordLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        wordLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,19 +55,6 @@ class WordCell: UICollectionViewCell {
 }
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-    /*
-    - Controller and their cycle life
-    - Collection View object and function
-        - numberOfItemsInSection
-        - cellForItemAt
-        - dequeueReusableCell
-        - Register
-    - UI Collection View Controller Object
-    - UIKit library
-    - CGSize
-    - NSCoder
-     */
     
     let cellId = "cellId"
     
@@ -48,6 +67,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register the cells
         // Register the new class WordCell instead
         collectionView?.register(WordCell.self, forCellWithReuseIdentifier: cellId)
+        
     }
     
     // Counting the total number of cells
