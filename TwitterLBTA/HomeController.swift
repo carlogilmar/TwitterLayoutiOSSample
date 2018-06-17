@@ -28,6 +28,7 @@ class WordCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         //backgroundColor = .yellow
+        print("Step 3: WordCell is init!")
         setupViews()
     }
     
@@ -40,12 +41,15 @@ class WordCell: UICollectionViewCell {
     }()
     
     func setupViews() {
+        print("Setting up view!")
         backgroundColor = .yellow
         addSubview(wordLabel)
         wordLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         wordLabel.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         wordLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         wordLabel.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        print(wordLabel.description)
+        print("===============================")
     }
     
     required init?(coder aDecoder: NSCoder) {
