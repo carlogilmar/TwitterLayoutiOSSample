@@ -61,6 +61,7 @@ class WordCell: UICollectionViewCell {
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
+    let headerId = "headerId"
     
     // Load the controller
     override func viewDidLoad(){
@@ -71,6 +72,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         // Register the cells
         // Register the new class WordCell instead
         collectionView?.register(WordCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(UICollectionViewCell.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
         
     }
     
@@ -94,4 +96,18 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return CGSize(width: view.frame.width, height: 50)
     }
     
+    //Adding the header
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath)
+        header.backgroundColor = .blue
+        print("Adding the header to the collection view")
+        print(header.description)
+        return header
+    }
+    
+    // Modify the header size
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        print("Modify the header size!")
+        return CGSize(width: view.frame.width, height: 50)
+    }
 }
