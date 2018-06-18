@@ -64,6 +64,20 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let headerId = "headerId"
     let footerId = "footerId"
     
+    //Controller Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        print(" 1>>>>>>>> View Will Appear!")
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        print(" 2>>>>>>>> View Did Appear")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        print(" 3>>>>>>>> View will disapear")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        print(" 4>>>>>>>> View did disappear")
+    }
+    
     // Load the controller
     override func viewDidLoad(){
         super.viewDidLoad()
