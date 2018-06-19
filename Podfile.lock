@@ -1,0 +1,16 @@
+PODS:
+  - LBTAComponents (1.0.2)
+
+DEPENDENCIES:
+  - LBTAComponents
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - LBTAComponents
+
+SPEC CHECKSUMS:
+  LBTAComponents: c4c8863e0ef6715e378300db148b96a09df656f7
+
+PODFILE CHECKSUM: c132053eab295ca8669e5b6bc5e92b2e22cc66e0
+
+COCOAPODS: 1.5.3
