@@ -14,6 +14,7 @@ class HomeDatasourceController: DatasourceController {
      */
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView?.backgroundColor = .red
+        //collectionView?.backgroundColor = .red
     }
 }
+
