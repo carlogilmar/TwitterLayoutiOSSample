@@ -65,6 +65,10 @@ class HomeDatasource: Datasource {
         return words.count
     }
     
+    override func headerClasses() -> [DatasourceCell.Type]? {
+        return [UserHeader.self]
+    }
+    
 }
 
 class HomeDatasourceController: DatasourceController {
@@ -79,6 +83,10 @@ class HomeDatasourceController: DatasourceController {
         print(homeDatasource.description)
         print("==================================")
         self.datasource = homeDatasource
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
     }
 }
 
