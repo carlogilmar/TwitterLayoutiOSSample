@@ -12,7 +12,22 @@ import LBTAComponents
     Creating a new swift class for provide a simple list
  */
 
+class UserHeader: DatasourceCell {
+    override func setupViews() {
+        super.setupViews()
+        backgroundColor = .blue
+    }
+}
+
 class UserCell: DatasourceCell {
+    
+    override var datasourceItem: Any? {
+        didSet{
+            print("Did set :-D ------------------------------------>")
+            nameLabel.text = datasourceItem as? String
+        }
+    }
+    
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "helloooo!!!"
