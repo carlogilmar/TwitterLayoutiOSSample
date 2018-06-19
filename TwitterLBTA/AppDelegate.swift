@@ -20,13 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+        /*
         // Setting the HomeController created by me
         let homeController = HomeController(collectionViewLayout: UICollectionViewFlowLayout())
-        
         // Setting the initial controller 
         window?.rootViewController = UINavigationController(rootViewController: homeController)
+        */
         
         print("Step 1: Ignoring the storyboard!!!!")
+        
+        window?.rootViewController = UINavigationController(rootViewController: HomeDatasourceController())
         
         return true
     }
