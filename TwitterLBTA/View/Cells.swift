@@ -62,6 +62,12 @@ class UserCell: DatasourceCell {
         return label
     }()
     
+    let followButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .cyan
+        return button
+    }()
+    
     override func setupViews() {
         print("UserCell setup views!")
         super.setupViews()
@@ -71,6 +77,7 @@ class UserCell: DatasourceCell {
         addSubview(nameLabel)
         addSubview(usernameLabel)
         addSubview(bioTextView)
+        addSubview(followButton)
         
         profileImageView.anchor(self.topAnchor,
                                 left: self.leftAnchor,
@@ -87,7 +94,7 @@ class UserCell: DatasourceCell {
         nameLabel.anchor(profileImageView.topAnchor,
                          left: profileImageView.rightAnchor,
                          bottom: nil,
-                         right: self.rightAnchor,
+                         right: followButton.leftAnchor,
                          topConstant: 0,
                          leftConstant: 4,
                          bottomConstant: 0,
@@ -116,6 +123,17 @@ class UserCell: DatasourceCell {
                            rightConstant: 0,
                            widthConstant: 0,
                            heightConstant: 0)
+        
+        followButton.anchor(topAnchor,
+                            left: nil,
+                            bottom: nil,
+                            right: self.rightAnchor,
+                            topConstant: 12,
+                            leftConstant: 0,
+                            bottomConstant:0,
+                            rightConstant: 12,
+                            widthConstant: 120,
+                            heightConstant: 34)
     }
     
 }
