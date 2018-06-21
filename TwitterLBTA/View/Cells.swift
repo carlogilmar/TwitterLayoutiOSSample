@@ -42,9 +42,29 @@ class UserHeader: DatasourceCell {
 }
 
 class UserFooter: DatasourceCell{
+    
+    let textLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Show me more ..."
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .green
+        addSubview(textLabel)
+        textLabel.anchor(topAnchor,
+                         left: leftAnchor,
+                         bottom: bottomAnchor,
+                         right: rightAnchor,
+                         topConstant: 0,
+                         leftConstant: 12,
+                         bottomConstant: 0,
+                         rightConstant: 0,
+                         widthConstant: 0,
+                         heightConstant: 0)
+        //textLabel.fillSuperview()
+        //backgroundColor = .green
     }
 }
 
@@ -87,7 +107,8 @@ class UserCell: DatasourceCell {
         let textView = UITextView()
         //label.backgroundColor = .yellow
         textView.text = "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología"
-        //label.font = UIFont.systemFont(ofSize: 14)
+        textView.font = UIFont.systemFont(ofSize: 14)
+        textView.backgroundColor = .clear
         return textView
     }()
     
