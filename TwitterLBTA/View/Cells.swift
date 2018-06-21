@@ -56,6 +56,12 @@ class UserCell: DatasourceCell {
         return label
     }()
     
+    let bioTextView: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .yellow
+        return label
+    }()
+    
     override func setupViews() {
         print("UserCell setup views!")
         super.setupViews()
@@ -64,6 +70,7 @@ class UserCell: DatasourceCell {
         addSubview(profileImageView)
         addSubview(nameLabel)
         addSubview(usernameLabel)
+        addSubview(bioTextView)
         
         profileImageView.anchor(self.topAnchor,
                                 left: self.leftAnchor,
@@ -98,6 +105,17 @@ class UserCell: DatasourceCell {
                              rightConstant: 0,
                              widthConstant: 0,
                              heightConstant: 20) //anchura
-        }
+        
+        bioTextView.anchor(usernameLabel.bottomAnchor,
+                           left: usernameLabel.leftAnchor,
+                           bottom: self.bottomAnchor,
+                           right: self.rightAnchor,
+                           topConstant: 0,
+                           leftConstant: 0,
+                           bottomConstant: 0,
+                           rightConstant: 0,
+                           widthConstant: 0,
+                           heightConstant: 0)
+    }
     
 }
