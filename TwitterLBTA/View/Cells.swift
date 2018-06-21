@@ -49,13 +49,21 @@ class UserCell: DatasourceCell {
         return label
     }()
     
+    let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "username"
+        label.backgroundColor = .purple
+        return label
+    }()
+    
     override func setupViews() {
         print("UserCell setup views!")
         super.setupViews()
-        backgroundColor = .yellow
+        //backgroundColor = .yellow
         
         addSubview(profileImageView)
         addSubview(nameLabel)
+        addSubview(usernameLabel)
         
         profileImageView.anchor(self.topAnchor,
                                 left: self.leftAnchor,
@@ -79,5 +87,17 @@ class UserCell: DatasourceCell {
                          rightConstant: 12,
                          widthConstant: 0,
                          heightConstant: 20)
-    }
+        
+        usernameLabel.anchor(nameLabel.bottomAnchor,
+                             left: nameLabel.leftAnchor,
+                             bottom: nil,
+                             right: nameLabel.rightAnchor, // anchura del elemento hacia la derecha
+                             topConstant: 8, //distancia con el elemento de arriba
+                             leftConstant: 0,
+                             bottomConstant: 0,
+                             rightConstant: 0,
+                             widthConstant: 0,
+                             heightConstant: 20) //anchura
+        }
+    
 }
