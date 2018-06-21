@@ -38,33 +38,51 @@ class UserCell: DatasourceCell {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
+        //imageView.backgroundColor = .red
+        imageView.image = #imageLiteral(resourceName: "profile")
+        imageView.layer.cornerRadius = 5
+        imageView.clipsToBounds = true
         return imageView
     }() // Closure properties as Computed properties
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "helloooo!!!"
-        label.backgroundColor = .green
+        label.text = "Carlo Gilmar"
+        //label.backgroundColor = .green
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
     let usernameLabel: UILabel = {
         let label = UILabel()
-        label.text = "username"
-        label.backgroundColor = .purple
+        label.text = "@carlogilmar"
+        //label.backgroundColor = .purple
+        label.textColor = UIColor(r: 130, g: 130, b: 130)
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
-    let bioTextView: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .yellow
-        return label
+    let bioTextView: UITextView = {
+        let textView = UITextView()
+        //label.backgroundColor = .yellow
+        textView.text = "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología"
+        //label.font = UIFont.systemFont(ofSize: 14)
+        return textView
     }()
     
     let followButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .cyan
+        let twitterBlue = UIColor(r: 61, g: 167, b: 244)
+        //button.backgroundColor = .cyan
+        button.layer.cornerRadius = 5
+        button.layer.borderColor = twitterBlue.cgColor
+        button.layer.borderWidth = 0
+        button.setTitle("Follow", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.setTitleColor(twitterBlue, for: .normal)
+        button.setImage(#imageLiteral(resourceName: "follow"), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         return button
     }()
     
@@ -106,7 +124,7 @@ class UserCell: DatasourceCell {
                              left: nameLabel.leftAnchor,
                              bottom: nil,
                              right: nameLabel.rightAnchor, // anchura del elemento hacia la derecha
-                             topConstant: 8, //distancia con el elemento de arriba
+                             topConstant: 0, //distancia con el elemento de arriba
                              leftConstant: 0,
                              bottomConstant: 0,
                              rightConstant: 0,
@@ -117,8 +135,8 @@ class UserCell: DatasourceCell {
                            left: usernameLabel.leftAnchor,
                            bottom: self.bottomAnchor,
                            right: self.rightAnchor,
-                           topConstant: 0,
-                           leftConstant: 0,
+                           topConstant: -4,
+                           leftConstant: -4,
                            bottomConstant: 0,
                            rightConstant: 0,
                            widthConstant: 0,
