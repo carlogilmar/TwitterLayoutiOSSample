@@ -10,8 +10,9 @@ import LBTAComponents
 class HomeDatasource: Datasource {
     
     let users: [User] = {
-        let carloUser = User(name: "Carlo", username: "carlogilmar", bioText: "Welcome to my life!")
-        return [carloUser]
+        let carloUser = User(name: "Carlo Gilmar", username: "@carlogilmar", bioText: "Welcome to my life!")
+        let aleeUser = User(name: "Itzel", username: "@alee_rguez", bioText: "Hombres necios que acusaís a las mujeres sin razón...")
+        return [carloUser, aleeUser]
     }()
     
     //let words = ["user1", "user2", "user3"]
