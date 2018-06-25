@@ -72,8 +72,18 @@ class UserCell: DatasourceCell {
     
     override var datasourceItem: Any? {
         didSet{
-            print("Did set :-D ------------------------------------>")
+            // dataSourceItem = User from UserList in HomeDatasource
+            print("--------------------")
+            print(datasourceItem!)
+            print("--------------------")
             //nameLabel.text = datasourceItem as? String
+            
+            // Cast the userlist using guard
+            guard let user = datasourceItem as? User else { return }
+            nameLabel.text = user.name
+            usernameLabel.text = user.username
+            bioTextView.text = user.bioText
+            
         }
     }
     
