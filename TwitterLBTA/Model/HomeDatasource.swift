@@ -9,7 +9,12 @@ import LBTAComponents
 
 class HomeDatasource: Datasource {
     
-    let words = ["user1", "user2", "user3"]
+    let users: [User] = {
+        let carloUser = User(name: "Carlo", username: "carlogilmar", bioText: "Welcome to my life!")
+        return [carloUser]
+    }()
+    
+    //let words = ["user1", "user2", "user3"]
     
     override func cellClasses() -> [DatasourceCell.Type] {
         print(" cellClasses() ==> ")
@@ -19,14 +24,14 @@ class HomeDatasource: Datasource {
     override func item(_ indexPath: IndexPath) -> Any? {
         print("Function item ---------- ")
         print(indexPath.item)
-        print(words[indexPath.item])
+        print(users[indexPath.item])
         print("--------------------")
-        return words[indexPath.item]
+        return users[indexPath.item]
     }
     
     override func numberOfItems(_ section: Int) -> Int {
         print("Number of items!!")
-        return words.count
+        return users.count
     }
     
     override func headerClasses() -> [DatasourceCell.Type]? {
