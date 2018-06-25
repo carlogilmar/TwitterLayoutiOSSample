@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D197CEC20E0B247002AED05 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D197CEB20E0B247002AED05 /* User.swift */; };
+		3D197CEE20E0B8BE002AED05 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D197CED20E0B8BE002AED05 /* UserCell.swift */; };
 		3D4CDB2420D61642006E6F9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CDB2320D61642006E6F9A /* AppDelegate.swift */; };
 		3D4CDB2920D61642006E6F9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D4CDB2720D61642006E6F9A /* Main.storyboard */; };
 		3D4CDB2B20D61643006E6F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D4CDB2A20D61643006E6F9A /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		0FC53D13EBAB81391EBE9BB1 /* Pods-TwitterLBTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitterLBTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwitterLBTA/Pods-TwitterLBTA.release.xcconfig"; sourceTree = "<group>"; };
 		3D197CEB20E0B247002AED05 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		3D197CED20E0B8BE002AED05 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		3D4CDB2020D61642006E6F9A /* TwitterLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D4CDB2320D61642006E6F9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D4CDB2820D61642006E6F9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3DD3EE1D20D8CA1A0024EF47 /* Cells.swift */,
+				3D197CED20E0B8BE002AED05 /* UserCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				3DD3EE1E20D8CA1A0024EF47 /* Cells.swift in Sources */,
 				3DD3EE1820D8BD940024EF47 /* HomeDatasourceController.swift in Sources */,
 				3D4CDB3620D6173D006E6F9A /* HomeController.swift in Sources */,
+				3D197CEE20E0B8BE002AED05 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
