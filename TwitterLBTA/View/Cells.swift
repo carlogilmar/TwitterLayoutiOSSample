@@ -17,13 +17,15 @@ class UserHeader: DatasourceCell {
 
     let textLabel: UILabel = {
         let label = UILabel()
-        label.text = "WHO TO FOLLOW"
+        label.text = "W H O  T O  F O L L O W"
         label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
 
     override func setupViews() {
         super.setupViews()
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         addSubview(textLabel)
         
         textLabel.anchor(topAnchor,
@@ -142,6 +144,10 @@ class UserCell: DatasourceCell {
     override func setupViews() {
         print("UserCell setup views!")
         super.setupViews()
+        
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        
         //backgroundColor = .yellow
         
         addSubview(profileImageView)
