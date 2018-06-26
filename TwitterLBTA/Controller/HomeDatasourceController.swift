@@ -15,11 +15,21 @@ class HomeDatasourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //collectionView?.backgroundColor = .red
+        
+        setupNavigationBarItems()
+        
+        //print("HomedatasourceController is here!!")
+        //print(homeDatasource.description)
+        //print("==================================")
         let homeDatasource = HomeDatasource()
-        print("HomedatasourceController is here!!")
-        print(homeDatasource.description)
-        print("==================================")
         self.datasource = homeDatasource
+    }
+    
+    private func setupNavigationBarItems(){
+        
+        let titleImageView = UIImageView(image:#imageLiteral(resourceName: "icon4"))
+        navigationItem.titleView = titleImageView
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
