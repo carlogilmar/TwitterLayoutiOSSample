@@ -60,6 +60,7 @@ class UserCell: DatasourceCell {
         textView.text = "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología"
         textView.font = UIFont.systemFont(ofSize: 14)
         textView.backgroundColor = .clear
+        textView.backgroundColor = .red
         return textView
     }()
     

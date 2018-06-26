@@ -22,9 +22,17 @@ class HomeDatasourceController: DatasourceController {
         self.datasource = homeDatasource
     }
     
-    // image profile square
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        
+        //let user = self.datasource?.item(indexPath)
+        //print("Collection view!!!")
+        //print(user.debugDescription)
+   
+        if let user = self.datasource?.item(indexPath) as? User {
+           // let estimatedFrame = NSString(string: user.bioText).boundingRect(with: <#T##CGSize#>, options: <#T##NSStringDrawingOptions#>, attributes: <#T##[NSAttributedStringKey : Any]?#>, context: <#T##NSStringDrawingContext?#>)
+        }
+        
+        return CGSize(width: view.frame.width, height: 100)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
