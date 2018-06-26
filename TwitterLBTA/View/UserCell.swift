@@ -60,7 +60,7 @@ class UserCell: DatasourceCell {
         textView.text = "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología"
         textView.font = UIFont.systemFont(ofSize: 14)
         textView.backgroundColor = .clear
-        textView.backgroundColor = .red
+        //textView.backgroundColor = .red
         return textView
     }()
     
@@ -83,6 +83,8 @@ class UserCell: DatasourceCell {
     override func setupViews() {
         print("UserCell setup views!")
         super.setupViews()
+        
+        //self.backgroundColor = .blue
         
         separatorLineView.isHidden = false
         separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
