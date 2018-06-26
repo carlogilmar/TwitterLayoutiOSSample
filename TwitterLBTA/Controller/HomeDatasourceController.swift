@@ -29,7 +29,15 @@ class HomeDatasourceController: DatasourceController {
         //print(user.debugDescription)
    
         if let user = self.datasource?.item(indexPath) as? User {
-           // let estimatedFrame = NSString(string: user.bioText).boundingRect(with: <#T##CGSize#>, options: <#T##NSStringDrawingOptions#>, attributes: <#T##[NSAttributedStringKey : Any]?#>, context: <#T##NSStringDrawingContext?#>)
+            let approximateWidthOfBioTextView = view.frame.width - 12 - 50 - 8
+            let size = CGSize(width: approximateWidthOfBioTextView, height: 1000)
+            
+            print("-.-.-.-.-")
+            print(approximateWidthOfBioTextView.description)
+            
+            let attr = [NSAttributedStringKey.font:  UIFont.systemFont(ofSize: 15)]
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attr, context: nil)
+            return CGSize(width: view.frame.width, height: estimatedFrame.height)
         }
         
         return CGSize(width: view.frame.width, height: 100)
