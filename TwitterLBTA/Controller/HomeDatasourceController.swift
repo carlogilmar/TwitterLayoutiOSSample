@@ -28,6 +28,8 @@ class HomeDatasourceController: DatasourceController {
     private func setupNavigationBarItems(){
         
         let titleImageView = UIImageView(image:#imageLiteral(resourceName: "icon4"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
         
     }
