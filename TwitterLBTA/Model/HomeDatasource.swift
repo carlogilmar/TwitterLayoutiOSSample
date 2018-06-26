@@ -12,7 +12,9 @@ class HomeDatasource: Datasource {
     let users: [User] = {
         let carloUser = User(name: "Carlo Gilmar", username: "@carlogilmar", bioText: "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología", profileImage: #imageLiteral(resourceName: "profile"))
         let aleeUser = User(name: "Itzel", username: "@alee_rguez", bioText: "Hombres necios que acusaís a las mujeres sin razón...", profileImage: #imageLiteral(resourceName: "alee"))
-        return [carloUser, aleeUser]
+        let mdUser = User(name: "Making Devs", username: "@makingdevs", bioText: "Impulsamos tu carrera como desarrollador de software.", profileImage: #imageLiteral(resourceName: "md"))
+        let joeUser = User(name: "Joe in Japan", username: "jna_sh", bioText: "Program Manager @GitHubEducation 🐙🐱 helping students build communities with 💖 and 🚩", profileImage: #imageLiteral(resourceName: "joe"))
+        return [carloUser, aleeUser, mdUser, joeUser]
     }()
     
     //let words = ["user1", "user2", "user3"]
