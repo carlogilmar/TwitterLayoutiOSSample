@@ -27,10 +27,29 @@ class HomeDatasourceController: DatasourceController {
     
     private func setupNavigationBarItems(){
         
-        let titleImageView = UIImageView(image:#imageLiteral(resourceName: "icon4"))
+        // center icon
+        let titleImageView = UIImageView(image:#imageLiteral(resourceName: "twitter"))
         titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
+        
+        //left button
+        let followButton = UIButton(type:.system)
+        followButton.setImage(UIImage(named: "follow1")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        followButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: followButton)
+        
+        //right buttons
+        let findButton = UIButton(type: .system)
+        findButton.setImage(UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        findButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        
+        let writteButton = UIButton(type: .system)
+        writteButton.setImage(UIImage(named: "compose")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        writteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        
+        navigationItem.rightBarButtonItems = [ UIBarButtonItem(customView: findButton),
+                                               UIBarButtonItem(customView: writteButton)]
         
     }
     
