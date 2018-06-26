@@ -36,20 +36,24 @@ class HomeDatasourceController: DatasourceController {
         //left button
         let followButton = UIButton(type:.system)
         followButton.setImage(UIImage(named: "follow1")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        followButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        followButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: followButton)
         
         //right buttons
         let findButton = UIButton(type: .system)
         findButton.setImage(UIImage(named: "search")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        findButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        findButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         
         let writteButton = UIButton(type: .system)
         writteButton.setImage(UIImage(named: "compose")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        writteButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        writteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         
         navigationItem.rightBarButtonItems = [ UIBarButtonItem(customView: findButton),
                                                UIBarButtonItem(customView: writteButton)]
+        
+        //setting up the background color
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
         
     }
     
