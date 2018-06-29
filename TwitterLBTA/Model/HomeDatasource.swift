@@ -16,6 +16,8 @@ class HomeDatasource: Datasource {
         let joeUser = User(name: "Joe in Japan", username: "jna_sh", bioText: "Program Manager @GitHubEducation 🐙🐱 helping students build communities with 💖 and 🚩", profileImage: #imageLiteral(resourceName: "joe"))
         return [carloUser, aleeUser, mdUser, joeUser]
     }()
+
+    let tweets = ["tweet1", "tweet2"]
     
     //let words = ["user1", "user2", "user3"]
     
@@ -34,6 +36,9 @@ class HomeDatasource: Datasource {
     
     override func numberOfItems(_ section: Int) -> Int {
         print("Number of items!!")
+        if section == 1 {
+            return tweets.count
+        }
         return users.count
     }
     
