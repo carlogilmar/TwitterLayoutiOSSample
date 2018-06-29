@@ -12,7 +12,9 @@ class TweetCell: DatasourceCell {
     
     override func setupViews() {
         super.setupViews()
-        backgroundColor = .red
+        separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        backgroundColor = .white
     }
     
 }
