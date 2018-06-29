@@ -66,6 +66,6 @@ class UserFooter: DatasourceCell{
                          widthConstant: 0,
                          heightConstant: 0)
         //textLabel.fillSuperview()
-        //backgroundColor = .green
+        backgroundColor = .white
     }
 }
