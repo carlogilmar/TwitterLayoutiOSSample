@@ -17,7 +17,15 @@ class HomeDatasource: Datasource {
         return [carloUser, aleeUser, mdUser, joeUser]
     }()
 
-    let tweets = ["tweet1", "tweet2"]
+    //let tweets = ["tweet1", "tweet2"]
+    let tweets: [Tweet] = {
+        let carloUser = User(name: "Carlo Gilmar", username: "@carlogilmar", bioText: "Desarrollador de software en @makingdevs | Github Campus Expert 🚩| Me gusta hacer registros gráficos y bailar salsa cubana | IPN Programación | UNAM Sociología", profileImage: #imageLiteral(resourceName: "profile"))
+        
+        let tweet1 = Tweet(user: carloUser, message: "ONE: The latest @humble book bundle is perfect for educators who want to learn about @arduino, @adafruit, & the #InternetOfThings! Over 20 @make books w/ project ideas, intro activities, and more. Check it out! 👇👇👇Maker Ed agregado")
+        let tweet2 = Tweet(user: carloUser, message: "TWO: The latest @humble book bundle is perfect for educators who want to learn about @arduino, @adafruit, & the #InternetOfThings! Over 20 @make books w/ project ideas, intro activities, and more. Check it out! 👇👇👇Maker Ed agregado")
+
+        return [tweet1, tweet2]
+    }()
     
     //let words = ["user1", "user2", "user3"]
     
@@ -31,6 +39,9 @@ class HomeDatasource: Datasource {
         print(indexPath.item)
         print(users[indexPath.item])
         print("--------------------")
+        if indexPath.section == 1 {
+            return tweets[indexPath.item]
+        }
         return users[indexPath.item]
     }
     
