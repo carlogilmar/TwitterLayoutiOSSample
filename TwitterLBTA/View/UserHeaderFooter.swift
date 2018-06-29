@@ -49,12 +49,31 @@ class UserFooter: DatasourceCell{
         let label = UILabel()
         label.text = "Show me more ..."
         label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = UIColor(r: 61, g: 167, b: 244)
         return label
     }()
     
     override func setupViews() {
+        
         super.setupViews()
+        
+        let whiteBackgroundView = UIView()
+        whiteBackgroundView.backgroundColor = .white
+        
+        addSubview(whiteBackgroundView)
         addSubview(textLabel)
+        
+        whiteBackgroundView.anchor(topAnchor,
+                                   left: leftAnchor,
+                                   bottom: bottomAnchor,
+                                   right: rightAnchor,
+                                   topConstant: 0,
+                                   leftConstant: 0,
+                                   bottomConstant: 14,
+                                   rightConstant: 0,
+                                   widthConstant: 0,
+                                   heightConstant: 0)
+        
         textLabel.anchor(topAnchor,
                          left: leftAnchor,
                          bottom: bottomAnchor,
