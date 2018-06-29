@@ -20,13 +20,16 @@ class TweetCell: DatasourceCell {
             let usernameString = "\(tweet.user.username)\n"
             
             attributedText.append(NSAttributedString(string: usernameString))
-            attributedText.append(NSAttributedString(string: tweet.message))
             
             let paragraphStyle = NSMutableParagraphStyle()
             paragraphStyle.lineSpacing = 10
             let range = NSMakeRange(0, attributedText.string.characters.count)
             //attributedText.addAttribute(NSMutableParagraphStyle, value: paragraphStyle, range: range)
             attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphStyle, range: range)
+            
+            attributedText.append(NSAttributedString(string: tweet.message))
+            
+
             
             messageTextView.attributedText = attributedText
         }
