@@ -61,11 +61,11 @@ class UserFooter: DatasourceCell{
                          right: rightAnchor,
                          topConstant: 0,
                          leftConstant: 12,
-                         bottomConstant: 0,
+                         bottomConstant: 14,
                          rightConstant: 0,
                          widthConstant: 0,
                          heightConstant: 0)
         //textLabel.fillSuperview()
-        backgroundColor = .white
+        //backgroundColor = .white
     }
 }
