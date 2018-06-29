@@ -10,6 +10,13 @@ import LBTAComponents
 
 class TweetCell: DatasourceCell {
     
+    override var datasourceItem: Any? {
+        didSet{
+            guard let tweet = datasourceItem as? Tweet else { return }
+            messageTextView.text = tweet.message
+        }
+    }
+    
     let messageTextView: UITextView = {
         let tv = UITextView()
         tv.text = "Example test"
