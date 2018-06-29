@@ -15,6 +15,7 @@
 		3D4CDB3620D6173D006E6F9A /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4CDB3520D6173D006E6F9A /* HomeController.swift */; };
 		3D5BEF5020E1FC4F004E5B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D5BEF4F20E1FC4F004E5B0E /* Assets.xcassets */; };
 		3D5BEF5220E202D1004E5B0E /* HomeDatasourceController+navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5BEF5120E202D1004E5B0E /* HomeDatasourceController+navbar.swift */; };
+		3DB8D00B20E5F60F00B1F447 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB8D00A20E5F60F00B1F447 /* TweetCell.swift */; };
 		3DD3EE1820D8BD940024EF47 /* HomeDatasourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3EE1720D8BD940024EF47 /* HomeDatasourceController.swift */; };
 		3DD3EE1E20D8CA1A0024EF47 /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3EE1D20D8CA1A0024EF47 /* UserHeaderFooter.swift */; };
 		3DD3EE2020D8CA630024EF47 /* HomeDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3EE1F20D8CA630024EF47 /* HomeDatasource.swift */; };
@@ -33,6 +34,7 @@
 		3D4CDB3520D6173D006E6F9A /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3D5BEF4F20E1FC4F004E5B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D5BEF5120E202D1004E5B0E /* HomeDatasourceController+navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeDatasourceController+navbar.swift"; sourceTree = "<group>"; };
+		3DB8D00A20E5F60F00B1F447 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		3DD3EE1720D8BD940024EF47 /* HomeDatasourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasourceController.swift; sourceTree = "<group>"; };
 		3DD3EE1D20D8CA1A0024EF47 /* UserHeaderFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		3DD3EE1F20D8CA630024EF47 /* HomeDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDatasource.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				3DD3EE1D20D8CA1A0024EF47 /* UserHeaderFooter.swift */,
 				3D197CED20E0B8BE002AED05 /* UserCell.swift */,
+				3DB8D00A20E5F60F00B1F447 /* TweetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				3DD3EE2020D8CA630024EF47 /* HomeDatasource.swift in Sources */,
 				3D4CDB2420D61642006E6F9A /* AppDelegate.swift in Sources */,
 				3D197CEC20E0B247002AED05 /* User.swift in Sources */,
+				3DB8D00B20E5F60F00B1F447 /* TweetCell.swift in Sources */,
 				3DD3EE1E20D8CA1A0024EF47 /* UserHeaderFooter.swift in Sources */,
 				3DD3EE1820D8BD940024EF47 /* HomeDatasourceController.swift in Sources */,
 				3D5BEF5220E202D1004E5B0E /* HomeDatasourceController+navbar.swift in Sources */,
