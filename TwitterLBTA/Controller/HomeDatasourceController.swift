@@ -16,6 +16,8 @@ class HomeDatasourceController: DatasourceController {
         super.viewDidLoad()
         //collectionView?.backgroundColor = .red
         
+        collectionView?.backgroundColor = UIColor(r: 232, g: 236, b: 241)
+        
         setupNavigationBarItems()
         
         //print("HomedatasourceController is here!!")

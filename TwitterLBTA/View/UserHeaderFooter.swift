@@ -38,7 +38,7 @@ class UserHeader: DatasourceCell {
                          rightConstant: 0,
                          widthConstant: 0,
                          heightConstant: 0)
-        //backgroundColor = .blue
+        backgroundColor = .white
         //textLabel.fillSuperview()
     }
 }
