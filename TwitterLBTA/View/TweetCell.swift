@@ -13,7 +13,16 @@ class TweetCell: DatasourceCell {
     override var datasourceItem: Any? {
         didSet{
             guard let tweet = datasourceItem as? Tweet else { return }
-            messageTextView.text = tweet.message
+            //messageTextView.text = tweet.message
+            
+            let attributedText = NSMutableAttributedString(string: tweet.user.name, attributes:[NSAttributedStringKey.font:  UIFont.systemFont(ofSize: 16)])
+            
+            let usernameString = "\(tweet.user.username)\n"
+            
+            attributedText.append(NSAttributedString(string: usernameString))
+            attributedText.append(NSAttributedString(string: tweet.message))
+            
+            messageTextView.attributedText = attributedText
         }
     }
     
